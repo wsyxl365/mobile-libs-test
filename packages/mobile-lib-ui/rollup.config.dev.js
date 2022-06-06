@@ -6,6 +6,10 @@
 const path = require('path');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
+import { babel } from '@rollup/plugin-babel'
+const json = require('rollup-plugin-json');
+const vue = require('rollup-plugin-vue');
+const postcss = require('rollup-plugin-postcss');
 
 const inputPath = path.resolve(__dirname, './src/index.js');
 const outputUmdPath = path.resolve(__dirname, './dist/mobile.js');
@@ -18,20 +22,32 @@ module.exports = {
         {
             file: outputUmdPath,
             format: 'umd',
-            name: 'mobile'
+            name: 'mobile',
+            globals: {
+                'vue': 'Vue'
+            }
         },
         {
             file: outputEsPath,
             format: 'es'
-        },
-        {
-            file: outputCjsPath,
-            format: 'cjs'
         }
+        // {
+        //     file: outputCjsPath,
+        //     format: 'cjs'
+        // }
     ],
     plugins: [
         resolve(),
-        commonjs()
+        // commonjs(),
+        babel({
+            exclude: "node_modules/**",
+            babelHelpers: 'bundled'
+        }),
+        json(),
+        vue(),
+        postcss({
+            plugins: []
+        })
     ],
     external: [
         'vue'

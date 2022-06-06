@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>mobile-libs-example</title>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="../dist/mobile.js"></script>
 </head>
 <body>
-
+    <div id="app">
+        {{message}}
+        <test-component></test-component>
+    </div>
 </body>
+<script>
+    Vue.createApp({
+        setup() {
+            var message = 'hello imooc!'
+            return {
+                message
+            }
+        }
+    }).use(window.mobile).mount('#app')
+</script>
 </html>
