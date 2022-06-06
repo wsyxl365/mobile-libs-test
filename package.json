@@ -1,0 +1,18 @@
+{
+  "name": "minqiao-mobile-libs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/node": "7.0.0",
+    "@babel/preset-env": "^7.18.2",
+    "rollup-plugin-commonjs": "^10.1.0"
+  }
+}
