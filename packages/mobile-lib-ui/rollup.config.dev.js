@@ -11,7 +11,7 @@ const json = require('rollup-plugin-json');
 const vue = require('rollup-plugin-vue');
 const postcss = require('rollup-plugin-postcss');
 
-const inputPath = path.resolve(__dirname, './src/index.js');
+const inputPath = path.resolve(__dirname, './lib/index.js');
 const outputUmdPath = path.resolve(__dirname, './dist/mobile.js');
 const outputEsPath = path.resolve(__dirname, './dist/mobile.es.js');
 const outputCjsPath = path.resolve(__dirname, './dist/mobile.cjs.js');
@@ -46,7 +46,8 @@ module.exports = {
         json(),
         vue(),
         postcss({
-            plugins: []
+            plugins: [],
+            extract: true
         })
     ],
     external: [

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/mobile.js",
+  "module": "dist/mobie.es.js",
   "files": [
     "dist",
     "src"
@@ -10,8 +11,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "rollup -w -c rollup.config.dev.js",
-    "build": "eslint ./src && rollup -c rollup.config.dev.js",
-    "build:pro": "eslint ./src && rollup -c rollup.config.prod.js",
+    "build": "eslint ./lib && rollup -c rollup.config.dev.js",
+    "build:pro": "eslint ./lib && rollup -c rollup.config.prod.js",
     "lint": "eslint ./src"
   },
   "keywords": [

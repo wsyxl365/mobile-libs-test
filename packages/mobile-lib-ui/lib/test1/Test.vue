@@ -25,8 +25,4 @@
   }
 </script>
 
-<style lang="scss" scoped>
-.test {
-  color: red;
-}
-</style>
+<style lang="scss" scoped></style>
