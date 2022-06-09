@@ -13,9 +13,9 @@ const vue = require('rollup-plugin-vue');
 const postcss = require('rollup-plugin-postcss');
 
 const inputPath = path.resolve(__dirname, './lib/index.js');
-const outputUmdPath = path.resolve(__dirname, './dist/mobile.js');
-const outputEsPath = path.resolve(__dirname, './dist/mobile.es.js');
-const outputCjsPath = path.resolve(__dirname, './dist/mobile.cjs.js');
+const outputUmdPath = path.resolve(__dirname, './dist/index.js');
+const outputEsPath = path.resolve(__dirname, './dist/index.es.js');
+const outputCjsPath = path.resolve(__dirname, './dist/index.cjs.js');
 
 module.exports = {
     input: inputPath,
